@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
  * - 어댑터 패턴으로 도메인과 인프라스트럭처 분리
  */
 @Configuration
-public class RepositoryConfig {
+public class ProductRepositoryConfig {
     /**
      * 주문 리포지터리 어댑터 등록
      *
