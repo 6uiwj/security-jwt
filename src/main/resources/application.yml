@@ -7,3 +7,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+
+springboot:
+  jwt:
+    secret: around-hub-studio-flature-spring-boot-3!@#
