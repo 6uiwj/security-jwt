@@ -1,4 +1,4 @@
-package com.springboot.security.user.application.security;
+package com.springboot.security.user.infrastructure.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
