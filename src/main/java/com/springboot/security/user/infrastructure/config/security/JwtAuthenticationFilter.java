@@ -1,4 +1,4 @@
-package com.springboot.security.user.infrastructure.security;
+package com.springboot.security.user.infrastructure.config.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -27,7 +27,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         this.jwtTokenProvider = jwtTokenProvider;
     }
 
-    //각 필터의 작업을 담당하는 메서드
+    //각 필터의 작업을 담당하는 메서드 (JwtAuthenticationFilter의 작업)
     @Override
     protected void doFilterInternal(HttpServletRequest request,
                                     HttpServletResponse response,
