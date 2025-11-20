@@ -1,13 +1,21 @@
 spring:
+  application:
+    name: security
   datasource:
-    url: jdbc:h2:mem:testdb
-    driver-class-name: org.h2.Driver
-    username: sa
-    password:
+    url: "jdbc:mysql://localhost:3306/security?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul"
+    username: root
+    password: "0000"
+    driverClassName: com.mysql.cj.jdbc.Driver
+
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
 
-springboot:
+
   jwt:
     secret: around-hub-studio-flature-spring-boot-3!@#
+
