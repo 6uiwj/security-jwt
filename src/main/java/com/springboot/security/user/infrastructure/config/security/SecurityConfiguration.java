@@ -63,7 +63,7 @@ public class SecurityConfiguration {
                     .requestMatchers("/sign-api/sign-in", "/sign-api/sign-up","/sign-api/exception").permitAll()
                     .requestMatchers(HttpMethod.GET, "/product/**").permitAll()
                     .requestMatchers("**exception**").permitAll()
-                    .anyRequest().hasRole("ADMIN"))
+                    .anyRequest().authenticated())
             .formLogin(AbstractHttpConfigurer::disable) //폼 로그인 비활성화
             //JwtAuthenticationFilter를 UsernamePasswordAuthenticationFilter 앞에 추가
             .addFilterBefore(new JwtAuthenticationFilter(jwtTokenProvider), UsernamePasswordAuthenticationFilter.class) //필터 배치할 위치 설정
