@@ -33,7 +33,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table
+@Table(name = "p_user")
 public class User implements UserDetails { //사용자 인증 정보로 사용
 
     @Id
