@@ -15,4 +15,9 @@ public class UserRepositoryAdapter implements UserRepository {
     public User getByUid(String uid) {
         return userJpaRepository.getByUid(uid);
     }
+
+    @Override
+    public User save(User user) {
+        return userJpaRepository.save(user);
+    }
 }
