@@ -37,7 +37,7 @@ public class JwtTokenProvider { //UserDetails 정보를 가져와 JWT 토큰 생
     private final org.slf4j.Logger LOGGER =  LoggerFactory.getLogger(JwtTokenProvider.class);
     private final UserDetailsService userDetailsService;
 
-    @Value("${springboot.jwt.secret}")
+    @Value("${spring.jwt.secret}")
     private String secretKey = "secretKey"; //yml파일에서 secretkey 가져오기
 
     private Key key;
