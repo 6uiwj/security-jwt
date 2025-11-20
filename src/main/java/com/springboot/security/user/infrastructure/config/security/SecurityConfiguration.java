@@ -39,6 +39,7 @@ public class SecurityConfiguration {
      *  - 인증 로직 커스터마이징
      *  - csrf, cors 등의 스프링 시큐리티 설정
      */
+    @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
             /**
@@ -59,6 +60,7 @@ public class SecurityConfiguration {
                 authorize
                     .requestMatchers("/sign-api/sign-up", "/swagger", "/swagger-ui.html", "/swagger-ui/**", "/api-docs", "/api-docs/**", "/v3/api-docs/**")
                     .permitAll()
+                    .requestMatchers("/sign-api/sign-in", "/sign-api/sign-up","/sign-api/exception").permitAll()
                     .requestMatchers(HttpMethod.GET, "/product/**").permitAll()
                     .requestMatchers("**exception**").permitAll()
                     .anyRequest().hasRole("ADMIN"))

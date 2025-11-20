@@ -34,7 +34,7 @@ public class SignController {
 
     @PostMapping(value = "/sign-in")
     public SignInResult signIn(@RequestBody SignInRequest signInRequest) throws Exception {
-        LOGGER.info("[signIn] 로그인을 시도하고 있씁니다. id : {}. pw : **** ", signInRequest.id());
+        LOGGER.info("[signIn] 로그인을 시도하고 있습니다. id : {}. pw : **** ", signInRequest.id());
 
         //Command 객체 생성
         SignInCommand signInCommand = new SignInCommand(
